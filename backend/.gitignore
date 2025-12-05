@@ -1,0 +1,20 @@
+# Dependencies
+/node_modules
+
+# Environment Variables (CRUCIAL for security)
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Build/Compiled Files (if you use Babel or TypeScript to compile JS)
+/build
+/dist
+
+# Logs and npm specific files
+npm-debug.log*
+yarn-error.log*
+
+# MongoDB storage (if you run a local DB instance)
+/data

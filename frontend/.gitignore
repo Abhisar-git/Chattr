@@ -1,0 +1,13 @@
+# Dependencies
+/node_modules
+
+# Build Output (Vite default)
+/dist
+
+# Logs
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Temporary Files / Cache
+.vite
