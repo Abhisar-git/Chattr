@@ -99,7 +99,9 @@ export const useChatStore = create((set, get) => ({
   // -------------------------
   joinChannel: async (channelId) => {
     try {
-      const res = await axiosInstance.post(`/channels/${channelId}/join`);
+      const res = await axiosInstance.post(`/channels/${channelId}/join` , {
+        withCredentials : true
+      });
       toast.success("Joined channel successfully!");
       
       get().getChannels(); 
@@ -125,7 +127,9 @@ export const useChatStore = create((set, get) => ({
   // -------------------------
   leaveChannel: async (channelId) => {
     try {
-        await axiosInstance.post(`/channels/${channelId}/leave`); // Calls backend route
+        await axiosInstance.post(`/channels/${channelId}/leave`,{
+          withCredentials:true
+        }); // Calls backend route
         toast.success("Left channel.");
         
         // 1. Deselect the channel and clear chat
@@ -149,7 +153,7 @@ export const useChatStore = create((set, get) => ({
       // Socket listener will handle state update
       await axiosInstance.post(
         `/messages/${selectedChannel._id}/send`,
-        { text, image }
+        { text, image },{withCredentials : true}
       );
     } catch (error) {
       console.log("Error sending message:", error.message);
