@@ -27,7 +27,7 @@ app.use(
     credentials: true,
   })
 );
-
+app._router('/' , "Backend is running");
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/channels", channelRoutes);
