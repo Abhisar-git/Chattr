@@ -13,7 +13,7 @@ const userSockets = {};      // { userId: [socketId1, socketId2] } for multi-tab
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://chattr-13x3.vercel.app/"],
+    origin: ["https://chattr-13x3.vercel.app"],
     credentials: true,
   },
 });
