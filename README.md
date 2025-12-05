@@ -1,4 +1,4 @@
-# Chattr - Mini Team Chat Application
+# Chatty - Mini Team Chat Application
 
 A real-time team chat application built with the MERN stack, featuring live messaging, channel management, and online status tracking.
 
