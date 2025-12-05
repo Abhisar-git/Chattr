@@ -27,7 +27,9 @@ app.use(
     credentials: true,
   })
 );
-app.get('/' , "Backend is running");
+app.get('/' , (req, res) => {
+   res.send("Backend Is running 🚀")
+});
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/channels", channelRoutes);
